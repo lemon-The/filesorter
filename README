@@ -9,7 +9,7 @@ The program get files and distribute them to appropriate directories
 
 Getting started
 ===============
-To compile this project you need to install
+To compile this project you need to download
 https://github.com/lemon-The/clargsparser project and install it to
 maven local repository:
     1) go to 'clargsparser' directory
