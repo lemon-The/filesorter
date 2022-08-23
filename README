@@ -1,0 +1,66 @@
+File sorter
+===========
+This project has made for educational purposes. You may do whatever you
+want with it.
+
+Description
+===========
+The program get files and distribute them to appropriate directories
+
+Getting started
+===============
+To compile this project you need to install
+https://github.com/lemon-The/clargsparser project and install it to
+maven local repository:
+    1) go to 'clargsparser' directory
+    2) $ mvn install
+Then you can compile File sorter:
+    1) go to File sorter directory
+    2) $ mvn clean compile assembly:single
+
+Usage
+=====
+To run:
+    $ java -jar target/filesorter-1.0-SNAPSHOT-jar-with-dependencies.jar \
+    dir_with_files/file* \
+    destination_dir \
+    -ymd
+
+-y                  sort by year
+-m                  sort by month
+-d                  sort by day
+--criteria [c|m|a]  choose sorting criteria (creation time, last 
+                    modification time, last access time)
+
+Possible result:
+================
+    destination_dir
+    ├── 1998
+    │   └── 07
+    │       └── 08
+    │           ├── file1
+    │           └── file2
+    ├── 1999
+    │   ├── 07
+    │   │   └── 08
+    │   │       └── file3
+    │   └── 08
+    │       ├── 08
+    │       │   ├── file4
+    │       │   └── file6
+    │       └── 09
+    │           └── file5
+    ├── 2020
+    │   ├── 03
+    │   │   ├── 05
+    │   │   │   └── file8
+    │   │   └── 09
+    │   │       └── file9
+    │   └── 08
+    │       └── 09
+    │           └── file7
+    └── 2021
+        └── 03
+            └── 09
+                └── file10
+
